@@ -7,6 +7,13 @@ timer=None
 windows=Tk()
 windows.title("Flash Card")
 windows.config(padx=50,pady=50,bg=BACKGROUND_COLOR)
+messagebox.showinfo(
+    title="How to Use",
+    message="✅ Click if you know the word — it will be removed from the list.\n"
+            "❌ Click if you don't know — the word will appear again later.\n\n"
+            "After 3 seconds, the English word will autometiclly be shown.\n"
+            "Let's begin!"
+)
 ############## DATA READ ###########
 try:
     data=pandas.read_csv(r"D:\python\My codeeess\tkenter\flash_card\data\words_to_learn.csv")
